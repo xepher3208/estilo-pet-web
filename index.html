@@ -6,9 +6,6 @@
   <title>Estilo Pet | Tienda para mascotas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Tema del formulario de Izipay (si tu guía de Izipay indica otro tema, cambia estas dos líneas) -->
-  <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon-reset.css">
-  <script src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="navidad">
@@ -133,40 +130,6 @@
         <div class="rc-acciones">
           <a id="rcWa" class="btn" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
           <button id="rcCopiar" class="btn btn-sec" type="button">Copiar hoja</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="pago" class="detalle" hidden>
-    <div class="detalle-caja" role="dialog" aria-modal="true" aria-labelledby="pgTitulo">
-      <button id="cerrarPago" class="detalle-x" type="button" aria-label="Cerrar">✕</button>
-      <h2 id="pgTitulo">Finalizar compra</h2>
-      <p class="rc-sub">Total a pagar: <strong id="pgTotal"></strong></p>
-      <form id="pagoForm" class="rec-form" autocomplete="on">
-        <fieldset><legend>Tus datos</legend>
-          <label>Nombres y apellidos *<input id="pgNombre" name="nombre" required minlength="3" maxlength="60" autocomplete="name"></label>
-          <div class="rec-grid">
-            <label>Correo electrónico *<input name="email" type="email" required maxlength="80" autocomplete="email"></label>
-            <label>Celular *<input name="tel" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel"></label>
-          </div>
-          <label>Dirección de entrega *<input name="direccion" required maxlength="150" placeholder="Calle, número, distrito (o escribe: Recojo en tienda)"></label>
-        </fieldset>
-        <p id="pgError" class="pg-error" role="alert" hidden></p>
-        <button class="btn" type="submit">Continuar al pago</button>
-        <p class="rc-nota">Pagas con tarjeta en un formulario seguro de Izipay. Usamos tus datos solo para tu pedido.</p>
-      </form>
-      <div id="pagoTarjeta" hidden>
-        <div id="kr-contenedor"><div class="kr-smart-form" kr-card-form-expanded></div></div>
-        <p id="pgError2" class="pg-error" role="alert" hidden></p>
-      </div>
-      <div id="pagoOk" hidden>
-        <h3>✅ ¡Pago recibido!</h3>
-        <p>Tu número de pedido es <strong id="pgPedido"></strong>. Guárdalo por si necesitas ayuda.</p>
-        <p>Envíanos el detalle por WhatsApp para preparar tu pedido:</p>
-        <div class="rc-acciones">
-          <a id="pgWa" class="btn" href="#" target="_blank" rel="noopener">Enviar mi pedido por WhatsApp</a>
-          <button id="pgCerrar2" class="btn btn-sec" type="button">Seguir comprando</button>
         </div>
       </div>
     </div>
