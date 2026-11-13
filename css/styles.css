@@ -245,3 +245,11 @@ footer a:hover{text-decoration:underline}
 .navidad footer{border-top:6px solid;border-image:repeating-linear-gradient(135deg,#C8102E 0 14px,#fff 14px 28px) 6}
 .navidad footer::before{content:"🎄 Felices fiestas 🎄";display:block;margin-bottom:8px;color:#fff;font-weight:700}
 @media(prefers-reduced-motion:reduce){.navidad .top::after{animation:none}}
+
+/* ---- Ventana de pago ---- */
+#pago .detalle-caja{width:min(560px,100%)}
+#pago h2{font-size:1.6rem;margin-right:44px}
+#kr-contenedor{margin-top:8px;min-height:140px}
+.pg-error{color:#b3261e;font-weight:700;font-size:.92rem}
+#pagoOk h3{font:800 1.4rem 'Baloo 2',sans-serif;margin-bottom:6px}
+#pagoOk p{margin-bottom:10px}

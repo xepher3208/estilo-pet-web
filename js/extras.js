@@ -81,6 +81,86 @@
   document.addEventListener("load", (e) => { if (e.target.tagName === "IMG") pintarChapa(e.target); }, true);
   document.querySelectorAll(".marca-chapa img").forEach((im) => { if (im.complete) pintarChapa(im); });
 
+  /* ---- Pago con Izipay (formulario incrustado) ----
+     1) /api/formtoken crea el pago en el servidor y devuelve un formToken  2) se muestra el formulario de tarjeta
+     3) al pagar, /api/validar comprueba la firma de la respuesta antes de dar el pago por bueno. */
+  const pago = $("#pago");
+  if (pago) {
+    const KR_URL = "https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js";
+    let krPromesa = null, pedido = null;
+    const mostrar = (paso) => { $("#pagoForm").hidden = paso !== "datos"; $("#pagoTarjeta").hidden = paso !== "tarjeta"; $("#pagoOk").hidden = paso !== "ok"; pago.scrollTop = 0; };
+    const aviso = (sel, msg) => { const e = $(sel); e.textContent = msg || ""; e.hidden = !msg; };
+    const cerrarPago = () => { pago.hidden = true; document.body.style.overflow = ""; };
+
+    const alPagar = (data) => {
+      aviso("#pgError2", "");
+      fetch("/api/validar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ answer: data.rawClientAnswer, hash: data.hash }) })
+        .then((r) => r.json())
+        .then((v) => {
+          if (v.ok && v.estado === "PAID") return exito();
+          aviso("#pgError2", "El pago no se completó. Revisa los datos de tu tarjeta o prueba con otra.");
+        })
+        .catch(() => aviso("#pgError2", "No pudimos confirmar tu pago. Si te cobraron, escríbenos por WhatsApp con tu tarjeta y la hora del pago."));
+      return false; // evita que la librería recargue la página
+    };
+
+    const exito = () => {
+      const p = pedido;
+      const msg = `Hola, acabo de pagar mi pedido ${p.orderId} en ${CONF.tienda}.\n\n${p.lineas.join("\n")}\n\nTotal: ${soles(p.total)}\nNombre: ${p.cliente.nombre}\nCelular: ${p.cliente.tel}\nEntrega: ${p.cliente.direccion}`;
+      $("#pgPedido").textContent = p.orderId;
+      $("#pgWa").href = `https://wa.me/${CONF.whatsapp}?text=${encodeURIComponent(msg)}`;
+      vaciarCarrito();
+      mostrar("ok");
+    };
+
+    const cargarKR = (clave) => krPromesa || (krPromesa = new Promise((ok, no) => {
+      const s = document.createElement("script");
+      s.src = KR_URL;
+      s.setAttribute("kr-public-key", clave);
+      s.setAttribute("kr-language", "es-ES");
+      s.setAttribute("kr-post-url-success", location.origin + "/");
+      s.onload = () => { if (!window.KR) { krPromesa = null; return no(new Error("KR")); } window.KR.onSubmit(alPagar); ok(window.KR); };
+      s.onerror = () => { krPromesa = null; no(new Error("carga")); };
+      document.head.appendChild(s);
+    }));
+
+    window.abrirPago = () => {
+      if (!carrito.length) return;
+      const total = carrito.reduce((s, c) => s + PRODUCTOS.find((p) => p.id === c.id).precio * c.cant, 0);
+      $("#pgTotal").textContent = soles(total);
+      $("#panel").hidden = true;
+      aviso("#pgError", ""); aviso("#pgError2", "");
+      mostrar("datos");
+      pago.hidden = false; document.body.style.overflow = "hidden";
+      $("#pgNombre").focus();
+    };
+
+    $("#pagoForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      aviso("#pgError", "");
+      const btn = $("#pagoForm button[type=submit]"), txt = btn.textContent;
+      btn.disabled = true; btn.textContent = "Preparando el pago…";
+      try {
+        const d = Object.fromEntries(new FormData(e.target));
+        const r = await fetch("/api/formtoken", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ items: carrito.map((c) => ({ id: c.id, cant: c.cant })), cliente: d }) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(j.error || "No se pudo iniciar el pago. Inténtalo de nuevo.");
+        const KR = await cargarKR(j.publicKey);
+        pedido = { orderId: j.orderId, total: j.total, cliente: d, lineas: carrito.map((c) => `${c.cant} x ${PRODUCTOS.find((p) => p.id === c.id).nombre}`) };
+        mostrar("tarjeta");
+        try { await KR.removeForms(); } catch (x) { /* aún no había formulario */ }
+        $("#kr-contenedor").innerHTML = '<div class="kr-smart-form" kr-card-form-expanded></div>';
+        await KR.setFormConfig({ formToken: j.formToken, "kr-language": "es-ES" });
+        await KR.renderElements("#kr-contenedor");
+      } catch (err) {
+        mostrar("datos");
+        aviso("#pgError", err.message === "carga" || err.message === "KR" ? "No se pudo cargar el formulario de pago. Revisa tu conexión e inténtalo de nuevo." : err.message);
+      } finally { btn.disabled = false; btn.textContent = txt; }
+    });
+    $("#cerrarPago").addEventListener("click", cerrarPago);
+    $("#pgCerrar2").addEventListener("click", cerrarPago);
+  }
+
   /* ---- Libro de Reclamaciones ---- */
   const modal = $("#reclamo"), form = $("#reclamoForm"), ok = $("#reclamoOk");
   if (!modal) return;

@@ -125,16 +125,14 @@ function pintarCarrito() {
   $("#contador").textContent = cantidad;
 }
 
-/* ---------- Pasarela de pagos (aquí conectas la tuya) ----------
-   Cuando elijas pasarela (Culqi, Niubiz, Izipay, Mercado Pago, PayPal, etc.),
-   el pago se crea en un servidor con tu clave secreta, nunca en este archivo.
-   Esta función es el punto de entrada: reemplaza el alert por la llamada a tu backend. */
+/* ---------- Pago ----------
+   "Pagar ahora" abre la ventana de pago (js/extras.js) que usa Izipay. Los montos y las claves se manejan en el servidor (carpeta api/). */
 function pagar() {
   if (!carrito.length) return alert("Agrega productos antes de pagar.");
-  const pedido = carrito.map((c) => ({ ...PRODUCTOS.find((p) => p.id === c.id), cant: c.cant }));
-  console.log("Pedido listo para enviar a la pasarela:", pedido);
-  alert("Aquí se conectará la pasarela de pagos.");
+  if (window.abrirPago) window.abrirPago();
+  else alert("El pago no está disponible en este momento. Escríbenos por WhatsApp.");
 }
+function vaciarCarrito() { carrito = []; guardar(); }
 
 /* ---------- Eventos ---------- */
 $("#buscar").addEventListener("input", (e) => { texto = e.target.value.toLowerCase(); pintarProductos(); });
