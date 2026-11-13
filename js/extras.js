@@ -93,14 +93,23 @@
     const cerrarPago = () => { pago.hidden = true; document.body.style.overflow = ""; };
 
     const alPagar = (data) => {
-      aviso("#pgError2", "");
-      fetch("/api/validar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ answer: data.rawClientAnswer, hash: data.hash }) })
-        .then((r) => r.json())
-        .then((v) => {
+      (async () => {
+        aviso("#pgError2", "");
+        const ca = data.clientAnswer || {}, tx = (ca.transactions && ca.transactions[0]) || {};
+        console.log("Izipay respondió:", ca.orderStatus, tx.detailedStatus || "", tx.errorMessage || "");
+        try {
+          const r = await fetch("/api/validar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ answer: data.rawClientAnswer, hash: data.hash, hashKey: data.hashKey }) });
+          const v = await r.json().catch(() => ({}));
           if (v.ok && v.estado === "PAID") return exito();
-          aviso("#pgError2", "El pago no se completó. Revisa los datos de tu tarjeta o prueba con otra.");
-        })
-        .catch(() => aviso("#pgError2", "No pudimos confirmar tu pago. Si te cobraron, escríbenos por WhatsApp con tu tarjeta y la hora del pago."));
+          if (!v.ok) {
+            console.error("No se pudo verificar la firma del pago. Revisa IZIPAY_HMAC_KEY en Vercel.");
+            return aviso("#pgError2", "No pudimos verificar tu pago (código F). Si te cobraron, escríbenos por WhatsApp.");
+          }
+          aviso("#pgError2", `El pago no se completó (estado: ${v.estado || "desconocido"}). Revisa los datos de tu tarjeta o prueba con otra.`);
+        } catch (e) {
+          aviso("#pgError2", "No pudimos confirmar tu pago (código R). Si te cobraron, escríbenos por WhatsApp.");
+        }
+      })();
       return false; // evita que la librería recargue la página
     };
 
