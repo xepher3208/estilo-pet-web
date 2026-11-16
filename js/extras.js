@@ -88,7 +88,7 @@
   if (pago) {
     const KR_URL = "https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js";
     let krPromesa = null, pedido = null;
-    const mostrar = (paso) => { $("#pagoForm").hidden = paso !== "datos"; $("#pagoTarjeta").hidden = paso !== "tarjeta"; $("#pagoOk").hidden = paso !== "ok"; pago.scrollTop = 0; };
+    const mostrar = (paso) => { $("#pagoExtras").hidden = paso !== "extras"; $("#pagoForm").hidden = paso !== "datos"; $("#pagoTarjeta").hidden = paso !== "tarjeta"; $("#pagoOk").hidden = paso !== "ok"; pago.scrollTop = 0; };
     const aviso = (sel, msg) => { const e = $(sel); e.textContent = msg || ""; e.hidden = !msg; };
     const cerrarPago = () => { pago.hidden = true; document.body.style.overflow = ""; };
 
@@ -133,15 +133,79 @@
       document.head.appendChild(s);
     }));
 
+    /* ---- Paso "¿Deseas agregar algún artículo adicional?": recomendaciones según lo que hay en el carrito ---- */
+    const COMPLEMENTA = {   // qué secciones combinan con lo que el cliente eligió
+      "Comida seca": ["Premios", "Comida húmeda", "Juguetes", "Arenas"],
+      "Comida húmeda": ["Comida seca", "Premios", "Juguetes", "Arenas"],
+      "Premios": ["Comida seca", "Comida húmeda", "Juguetes"],
+      "Arenas": ["Comida seca", "Comida húmeda", "Premios", "Juguetes"],
+      "Juguetes": ["Premios", "Comida seca", "Comida húmeda"],
+      "Aves": ["Aves"], "Conejos": ["Conejos"], "Farmacia": ["Farmacia", "Premios"],
+    };
+    const DIETA = /veterinary|prescription|renal|urinary|hepatic|gastro|sensitiv|metabolic|diabet/i;
+    function sugerencias(max = 6) {
+      const enCarrito = carrito.map((c) => PRODUCTOS.find((p) => p.id === c.id)).filter(Boolean);
+      const enGrupos = new Set(enCarrito.map(claveGrupo));
+      const mascotas = new Set(enCarrito.map((p) => p.mascota).filter(Boolean));
+      const secciones = new Set(enCarrito.map((p) => p.seccion));
+      const marcas = new Set(enCarrito.map((p) => p.marca).filter((m) => m && m !== "Farmacia"));
+      const grupos = new Map();
+      PRODUCTOS.forEach((p) => { const k = claveGrupo(p); (grupos.get(k) || grupos.set(k, []).get(k)).push(p); });
+      const cand = [];
+      grupos.forEach((vs, k) => {
+        if (enGrupos.has(k)) return;                                   // ya lo tiene en el carrito
+        const p = vs.filter((v) => v.precio).sort((x, y) => x.precio - y.precio)[0];
+        if (!p) return;                                                // sin precio: no se ofrece
+        let s = 0;
+        if (p.mascota) s += mascotas.has(p.mascota) ? 4 : mascotas.size ? -6 : 0;     // misma mascota; no mezclar perros con gatos
+        if (enCarrito.some((c) => (COMPLEMENTA[c.seccion] || []).includes(p.seccion))) s += 3;
+        else if (secciones.has(p.seccion)) s += 1;
+        if (p.marca && marcas.has(p.marca)) s += 1.5;
+        if (p.seccion === "Farmacia" && !secciones.has("Farmacia")) s -= 6;           // medicinas solo si ya lleva una
+        if (p.precio <= 35) s += 0.5;                                                 // complementos accesibles
+        else if (p.precio > 60) s -= 3;                                               // nada demasiado caro como adicional
+        if (DIETA.test(p.nombre) && !enCarrito.some((c) => DIETA.test(c.nombre))) s -= 8; // dietas veterinarias solo si ya lleva una
+        if (s > 0) cand.push({ p, s });
+      });
+      cand.sort((x, y) => y.s - x.s || x.p.precio - y.p.precio || x.p.id - y.p.id);
+      const elegidos = [], porSeccion = {};
+      for (const c of cand) { if ((porSeccion[c.p.seccion] || 0) < 2 && elegidos.length < max) { elegidos.push(c.p); porSeccion[c.p.seccion] = (porSeccion[c.p.seccion] || 0) + 1; } }
+      for (const c of cand) { if (elegidos.length < max && !elegidos.includes(c.p)) elegidos.push(c.p); }
+      return elegidos;
+    }
+    const totalCarrito = () => carrito.reduce((s, c) => s + PRODUCTOS.find((p) => p.id === c.id).precio * c.cant, 0);
+    const actualizarTotalPago = () => { $("#pgTotal").textContent = soles(totalCarrito()); };
+    function pintarExtras(lista) {
+      $("#extrasLista").innerHTML = lista.map((p) => {
+        const varias = !!p.grupo, nombre = varias ? p.base : p.nombre;
+        const meta = [p.marca && p.marca !== "Farmacia" ? p.marca : "", varias ? p.etiqueta : ""].filter(Boolean).join(" · ");
+        return `<article class="ext-item">
+          <div class="ext-foto">${fotoHTML(p, baseGrupo(p), nombre, 'loading="lazy"')}</div>
+          <div class="ext-info"><span class="ext-nombre">${nombre}</span>${meta ? `<small class="ext-meta">${meta}</small>` : ""}<strong class="ext-precio">${soles(p.precio)}</strong></div>
+          <button class="ext-btn" type="button" data-id="${p.id}" aria-pressed="false">Agregar</button>
+        </article>`;
+      }).join("");
+    }
+    $("#extrasLista").addEventListener("click", (e) => {
+      const b = e.target.closest(".ext-btn"); if (!b) return;
+      const id = +b.dataset.id, ya = carrito.some((c) => c.id === id);
+      if (ya) quitar(id); else agregar(id, 1, false);
+      b.classList.toggle("on", !ya); b.setAttribute("aria-pressed", String(!ya)); b.textContent = ya ? "Agregar" : "✓ Agregado";
+      actualizarTotalPago();
+    });
+    const irADatos = () => { mostrar("datos"); $("#pgNombre").focus(); };
+    $("#extrasSeguir").addEventListener("click", irADatos);
+    $("#extrasVolver").addEventListener("click", () => { cerrarPago(); $("#panel").hidden = false; });
+
     window.abrirPago = () => {
       if (!carrito.length) return;
-      const total = carrito.reduce((s, c) => s + PRODUCTOS.find((p) => p.id === c.id).precio * c.cant, 0);
-      $("#pgTotal").textContent = soles(total);
+      actualizarTotalPago();
       $("#panel").hidden = true;
       aviso("#pgError", ""); aviso("#pgError2", "");
-      mostrar("datos");
+      const sug = sugerencias();
+      if (sug.length) { pintarExtras(sug); mostrar("extras"); } else mostrar("datos");
       pago.hidden = false; document.body.style.overflow = "hidden";
-      $("#pgNombre").focus();
+      if (!sug.length) $("#pgNombre").focus();
     };
 
     $("#pagoForm").addEventListener("submit", async (e) => {
@@ -172,6 +236,56 @@
     $("#cerrarPago").addEventListener("click", cerrarPago);
     $("#pgCerrar2").addEventListener("click", cerrarPago);
   }
+
+  /* ---- Fotos de productos parejas ----
+     Cada foto trae más o menos aire alrededor del producto. Se mide dónde está el producto (lo que no es fondo),
+     se centra y se escala para que todos ocupen el mismo espacio dentro del recuadro. */
+  const LLENADO_FOTO = 0.9;   // fracción del recuadro que ocupa el producto (0.9 = 90 %)
+  function medirFoto(img) {
+    try {
+      const nw = img.naturalWidth, nh = img.naturalHeight; if (!nw || !nh) return null;
+      const k = 120 / Math.max(nw, nh), W = Math.max(8, Math.round(nw * k)), H = Math.max(8, Math.round(nh * k));
+      const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+      const cx = cv.getContext("2d", { willReadFrequently: true }); cx.drawImage(img, 0, 0, W, H);
+      const d = cx.getImageData(0, 0, W, H).data, cubos = new Map(); let total = 0, opacos = 0;
+      for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+        if (x > 1 && y > 1 && x < W - 2 && y < H - 2) continue;
+        const i = (y * W + x) * 4; total++;
+        if (d[i + 3] < 200) continue; opacos++;
+        const key = ((d[i] >> 4) << 8) | ((d[i + 1] >> 4) << 4) | (d[i + 2] >> 4);
+        const o = cubos.get(key) || { n: 0, r: 0, g: 0, b: 0 }; o.n++; o.r += d[i]; o.g += d[i + 1]; o.b += d[i + 2]; cubos.set(key, o);
+      }
+      let bg = null;
+      if (opacos / total >= 0.6) { let m = null; cubos.forEach((o) => { if (!m || o.n > m.n) m = o; }); bg = [m.r / m.n, m.g / m.n, m.b / m.n]; }
+      const cols = new Array(W).fill(0), filas = new Array(H).fill(0);
+      for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+        const i = (y * W + x) * 4;
+        if (d[i + 3] < 40) continue;
+        if (bg && Math.hypot(d[i] - bg[0], d[i + 1] - bg[1], d[i + 2] - bg[2]) < 45) continue;
+        cols[x]++; filas[y]++;
+      }
+      const ini = (a) => a.findIndex((n) => n >= 2), fin = (a) => a.length - 1 - [...a].reverse().findIndex((n) => n >= 2);
+      const x0 = ini(cols), x1 = fin(cols), y0 = ini(filas), y1 = fin(filas);
+      if (x0 < 0 || y0 < 0 || x1 < x0 || y1 < y0) return null;
+      if ((x1 - x0 + 1) * (y1 - y0 + 1) < W * H * 0.03) return null;           // casi vacía: se deja como está
+      return [x0 / k, y0 / k, (x1 + 1) / k, (y1 + 1) / k, nw, nh].map((v) => Math.round(v * 10) / 10).join(",");
+    } catch (e) { return null; }     // si el navegador no deja leer la imagen (abierta con doble clic), queda el ajuste básico de CSS
+  }
+  function ajustarFoto(img) {
+    if (!img.dataset.bb) return;
+    const [x0, y0, x1, y1, nw, nh] = img.dataset.bb.split(",").map(Number);
+    const caja = img.parentElement.getBoundingClientRect(); if (!caja.width || !caja.height) return;
+    const bw = x1 - x0, bh = y1 - y0, s = Math.min((caja.width * LLENADO_FOTO) / bw, (caja.height * LLENADO_FOTO) / bh, 6);
+    img.style.cssText = `inset:auto;left:50%;top:50%;max-width:none;object-fit:fill;width:${nw * s}px;height:${nh * s}px;margin-left:${-(x0 + bw / 2) * s}px;margin-top:${-(y0 + bh / 2) * s}px`;
+  }
+  document.addEventListener("load", (e) => {
+    const img = e.target;
+    if (img.tagName !== "IMG" || !img.closest(".foto, .det-foto, .cart-foto, .ext-foto")) return;
+    const bb = medirFoto(img);
+    if (bb) { img.dataset.bb = bb; ajustarFoto(img); }
+  }, true);
+  let _rf = 0;
+  window.addEventListener("resize", () => { cancelAnimationFrame(_rf); _rf = requestAnimationFrame(() => document.querySelectorAll(".foto img[data-bb], .det-foto img[data-bb], .cart-foto img[data-bb], .ext-foto img[data-bb]").forEach(ajustarFoto)); });
 
   /* ---- Libro de Reclamaciones ---- */
   const modal = $("#reclamo"), form = $("#reclamoForm"), ok = $("#reclamoOk");

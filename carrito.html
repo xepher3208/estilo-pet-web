@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu carrito | Estilo Pet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tema del formulario de Izipay (si tu guía de Izipay indica otro tema, cambia estas dos líneas) -->
+  <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon-reset.css">
+  <script src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body class="navidad">
+  <header class="top">
+    <a class="logo" href="index.html"><img src="img/logo.png" alt="Estilo Pet"></a>
+    <a class="btn-carrito" href="index.html">← Seguir comprando</a>
+  </header>
+
+  <main class="cp-wrap">
+    <h1 class="cp-titulo">Tu carrito <small id="cpCuenta"></small></h1>
+
+    <ol class="cp-pasos" id="cpPasos" aria-label="Pasos de la compra">
+      <li data-p="1"><b>1</b> Carrito</li>
+      <li data-p="2"><b>2</b> Tus datos</li>
+      <li data-p="3"><b>3</b> Pago</li>
+    </ol>
+
+    <div id="cpVacio" class="cp-card cp-vacio" hidden>
+      <div class="cp-vacio-ico" aria-hidden="true">🛒</div>
+      <h2>Tu carrito está vacío</h2>
+      <p>Agrega algo rico para tu mascota.</p>
+      <a class="btn" href="index.html#catalogo">Ver productos</a>
+    </div>
+
+    <div id="cpGrid" class="cp-grid" hidden>
+      <section class="cp-main">
+        <!-- Paso 1: productos -->
+        <div id="paso1">
+          <div class="cp-card"><ul id="cpItems" class="cp-items"></ul></div>
+          <div id="cpExtrasBox" class="cp-card cp-extras-box" hidden>
+            <h2>¿Deseas agregar algún artículo adicional?</h2>
+            <p class="cp-sub">Te recomendamos estos productos según lo que elegiste.</p>
+            <div id="cpExtras" class="cp-extras"></div>
+          </div>
+        </div>
+
+        <!-- Paso 2: datos -->
+        <div id="paso2" hidden>
+          <div class="cp-card">
+            <h2>Tus datos</h2>
+            <p class="cp-sub">Los usamos solo para tu pedido.</p>
+            <form id="pagoForm" class="rec-form" autocomplete="on">
+              <fieldset><legend>Contacto y entrega</legend>
+                <label>Nombres y apellidos *<input id="pgNombre" name="nombre" required minlength="3" maxlength="60" autocomplete="name"></label>
+                <div class="rec-grid">
+                  <label>Correo electrónico *<input name="email" type="email" required maxlength="80" autocomplete="email"></label>
+                  <label>Celular *<input name="tel" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel"></label>
+                </div>
+                <label>Dirección de entrega *<input name="direccion" required maxlength="150" placeholder="Calle, número, distrito (o escribe: Recojo en tienda)"></label>
+              </fieldset>
+              <p id="pgError" class="pg-error" role="alert" hidden></p>
+              <div class="cp-acciones">
+                <button class="btn" type="submit">Continuar al pago</button>
+                <button class="btn btn-sec" type="button" id="volver1">Volver al carrito</button>
+              </div>
+              <p class="rc-nota">Pagas con tarjeta en un formulario seguro de Izipay.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Paso 3: tarjeta -->
+        <div id="paso3" hidden>
+          <div class="cp-card">
+            <h2>Pago con tarjeta</h2>
+            <p class="cp-sub">Formulario seguro de Izipay.</p>
+            <div id="kr-contenedor"></div>
+            <p id="pgError2" class="pg-error" role="alert" hidden></p>
+            <button class="btn btn-sec" type="button" id="volver2">← Editar mis datos</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cp-card cp-resumen" id="cpResumen" aria-label="Resumen del pedido">
+        <h2>Resumen</h2>
+        <ul id="cpMini" class="cp-mini" hidden></ul>
+        <div class="cp-linea"><span id="cpLineaTxt">Productos</span><span id="cpSub">S/ 0.00</span></div>
+        <div class="cp-total"><span>Total</span><strong id="cpTotal">S/ 0.00</strong></div>
+        <button id="cpIr" class="btn" type="button">Continuar</button>
+        <a class="btn-link" href="index.html#catalogo">Seguir comprando</a>
+      </aside>
+    </div>
+
+    <!-- Pago recibido -->
+    <div id="cpOk" class="cp-card cp-ok" hidden>
+      <div class="cp-vacio-ico" aria-hidden="true">✅</div>
+      <h2>¡Pago recibido!</h2>
+      <p>Tu número de pedido es <strong id="pgPedido"></strong>. Guárdalo por si necesitas ayuda.</p>
+      <p>Envíanos el detalle por WhatsApp para preparar tu pedido:</p>
+      <div class="cp-acciones cp-centro">
+        <a id="pgWa" class="btn" href="#" target="_blank" rel="noopener">Enviar mi pedido por WhatsApp</a>
+        <a class="btn btn-sec" href="index.html">Seguir comprando</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="pie-dir"><a href="https://www.google.com/maps/search/?api=1&query=Av%20Elmer%20Faucett%20182%20San%20Miguel%20Lima%20Peru" target="_blank" rel="noopener">📍 Av. Elmer Faucett 182, Tda. A1 · San Miguel</a></p>
+    <p><a class="pie-wa" href="https://wa.me/51937678433?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20productos." target="_blank" rel="noopener">WhatsApp: 937 678 433</a></p>
+    <p class="pie-copy">© 2026 Estilo Pet</p>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/extras.js"></script>
+</body>
+</html>

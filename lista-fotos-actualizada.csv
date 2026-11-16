@@ -1,0 +1,518 @@
+﻿id,marca,producto,precio,nombre_del_archivo
+1,Belcando,"Belcando Super Premium pavo, arroz y calabacín 800 g",28.0,1.jpg
+2,Brit,Brit Mono Protein Conejo Perros Lata 400 g,19.0,2.jpg
+3,Brit,Brit Mono Protein Pavo Perros Lata 400 g,19.0,3.jpg
+4,Brit,Brit Paté & Meat Pato Perros Lata 800 g,25.0,4.jpg
+5,Brit,Brit Paté & Meat Pavo Perros Lata 400 g,17.0,5.jpg
+6,Brit,Brit Paté & Meat Salmon Perros Lata 400 g,17.0,6.jpg
+8,Brit,Brit Veterinary Diet Gastrointestinal Salmon with Peas Gatos Lata 200 g,15.0,8.jpg
+9,Brit,Brit Paté & Meat Pavo Perros Lata 800 g,25.0,9.jpg
+10,Brit,Brit Paté & Meat Salmon Perros Lata 800 g,25.0,10.jpg
+11,Brit,Brit Paté & Meat Cordero Perros Lata 400 g,17.0,11.jpg
+12,Brit,Brit Paté & Meat Conejo Perros Lata 800 g,25.0,12.jpg
+13,Canbo,Canbo Adultos Flexibilidad y Movilidad Perros Lata 330 g,10.5,13.jpg
+14,Canbo,Canbo Adultos Óptima Digestión Perros Lata 330 g,10.5,14.jpg
+15,Canbo,Canbo Adultos Piel Sensible Perros Lata 330 g,10.5,15.jpg
+16,Canbo,Canbo Cachorros Crecimiento y Desarrollo Perros Lata 330 g,10.5,16.jpg
+17,Canbo,Canbo Adultos Hipoalergénico Lata 330 g,12.5,17.jpg
+18,Canbo,Canbo Cachorros Hipoalergénico Lata 330 g,12.5,18.jpg
+19,Canbo,Canbo Kitten Gatitos Con Pollo e Hígado Lata 85 g,5.5,19.jpg
+20,Canbo,Canbo Adult Adultos Con Pollo e Hígado Lata 85 g,5.5,20.jpg
+21,Canbo,Canbo Cat pate Esterilizados Con Pollo Lata 85 g,5.5,21.jpg
+22,Felix,Felix Paté Sabor Pavo y Menudencias Gatos Lata 156 g,5.0,22.jpg
+23,Felix,Felix Paté Sabor Salmón Gatos Lata 156 g,5.0,23.jpg
+24,Felix,Felix Paté Sabor pescado Gatos Lata 156 g,5.0,24.jpg
+25,Felix,Purina Felix Trocitos Jugosos Sabor Atún Pouch 85 g,3.5,25.jpg
+26,Felix,Purina Felix Trocitos Jugosos Sabor Carne Pouch 85 g,3.5,26.jpg
+27,Felix,Purina Felix Trocitos Jugosos Sabor Pavo Pouch 85 g,3.5,27.jpg
+28,Felix,Purina Felix Trocitos Jugosos Sabor Pollo Pouch 85 g,3.5,28.jpg
+29,Felix,Purina Felix Trocitos Jugosos Sabor Salmón Pouch 85 g,3.5,29.jpg
+30,Hill's,Hill's Prescription Diet Digestive Care i/d Chicken Pâté Feline Lata 156 g,25.0,30.jpg
+31,Hill's,Hill's Prescription Diet Kidney Care k/d Pâté with Chicken Feline Lata 156 g,25.0,31.jpg
+32,Hill's,Hill's Prescription Diet Urgent Care a/d With Chicken Canine/Feline Lata 156 g,23.0,32.jpg
+33,Hill's,Hill's Prescription Diet Urinary Care c/d With Ocean Fish Feline Lata 156 g,25.0,33.jpg
+34,Creamy,Inaba Churu Creamy Treat Chicken with Vegetables Recipe Perros 4 tubos,12.0,34.jpg
+35,Creamy,Inaba Churu Unique Creamy Treat Tuna with Salmon Recipe Gatos 4 tubos,12.0,35.jpg
+36,Leonardo,Leonardo Cat Food Kitten Rico en Ave Gatitos Lata 400 g,18.5,36.jpg
+37,Leonardo,Leonardo Cat Food Puro en Ave Gatos Lata 200 g,12.5,37.jpg
+38,Leonardo,Leonardo Cat Food Rico en Conejo Gatos Lata 400 g,18.0,38.jpg
+39,Leonardo,Leonardo Cat Food Rico en Sabroso Pato Gatos Lata 400 g,18.0,39.jpg
+40,Monge,Monge Fruit Pato y Naranja 100 g (Perro),6.5,40.jpg
+41,Monge,Monge Fruit Cerdo y Piña 100 g (Perro),6.5,41.jpg
+42,Monge,Monge Grill Adult Dog Bocconcini al Forno Agnello con Ortaggi Cordero Pouch 100 g,6.0,42.jpg
+43,Monge,Monge Grill Senior Cat Bocconcini al Forno Sgombro Caballa Pouch 85 g,7.5,43.jpg
+44,Monge,Monge Monoprotein Sfilaccetti Pavo con Zanahorias Gatos Lata 80 g,8.5,44.jpg
+45,Monge,Monge Monoprotein Solo Cordero 150 g (Perro),9.5,45.jpg
+46,Monge,Monge Monoprotein Solo Conejo 150 g (Perro),9.5,46.jpg
+47,Monge,Monge Monoprotein Solo Pavo Perros Lata 400 g,18.0,47.jpg
+48,Monge,Monge Monoprotein Solo Atún 150 g (Perro),9.5,48.jpg
+49,Monge,Monge VetSolution Dermatosis Feline Vasqueta 100 g,8.5,49.jpg
+50,Monge,Monge VetSolution Feline Gastrointestinal Pork Adult Feline Vasqueta 100 g,8.5,50.jpg
+51,Monge,Monge VetSolution Recovery Feline Vasqueta 100 g,8.5,51.jpg
+52,Naturalistic,Naturalistic Meat Paste Duck Meat Pasta de Pato Perros Tubo Pouch,8.0,52.jpg
+53,Nuevo,Nuevo Super-Premium Adult Cats Chicken Lata 200 g,9.5,53.jpg
+54,Nuevo,Nuevo Super-Premium Adult Cats Salmon Lata 200 g,9.5,54.jpg
+55,Nuevo,Nuevo Super-Premium Adult venado con fideos y arandanos Lata 400 g,13.5,55.jpg
+56,Nuevo,Nuevo Super-Premium Adulto perro cordero y papas Lata 400 g,13.5,56.jpg
+57,Purina Cat Chow,Purina Cat Chow Adultos Pescado Pouch 85 g,POR CONFIRMAR,57.jpg
+58,Purina Cat Chow,Purina Cat Chow Adultos Pollo Pouch 85 g,POR CONFIRMAR,58.jpg
+59,Purina Cat Chow,Purina Cat Chow Esterilizados Pescado Pouch 85 g,4.5,59.jpg
+60,Purina Cat Chow,Purina Cat Chow Gatitos Pollo Pouch 85 g,4.5,60.jpg
+61,Purina Dog Chow,Purina Dog Chow Adultos Todos los Tamaños Sabor a Cordero Pouch 100 g,POR CONFIRMAR,61.jpg
+62,Purina Dog Chow,Purina Dog Chow Adultos Todos los Tamaños Sabor a Pollo Pouch 100 g,POR CONFIRMAR,62.jpg
+63,Purina ONE,"Purina ONE Adultos y Cachorros Multi Proteínas Carne, Pollo y Cordero Pouch 85 g",POR CONFIRMAR,63.jpg
+64,Purina Pro Plan,Purina Pro Plan Veterinary Diets Gatos Lata 156 g,POR CONFIRMAR,64.jpg
+65,Nuevo,Nuevo Super-Premium Adulto Senior perro cordero y avena Lata 400 g,13.5,65.jpg
+66,Ricocan,Ricocan Adultos Sabor Carne Pouch 100 g,2.5,66.jpg
+67,Ricocan,Ricocan Adultos Sabor Cordero Pouch 100 g,2.5,67.jpg
+68,Ricocan,Ricocan Adultos Sabor Pollo Pouch 100 g,2.5,68.jpg
+69,Ricocan,Ricocan Cachorros Sabor cordero Pouch 100 g,2.5,69.jpg
+70,Ricocan,Ricocan Cachorros Sabor pollo Pouch 100 g,2.5,70.jpg
+71,Ricocan,Ricocan Paté Adultos Sabor Carne Lata 330 g,5.5,71.jpg
+72,Ricocan,Ricocan Paté Adultos Sabor Cordero Lata 330 g,5.5,72.jpg
+73,Ricocan,Ricocan Paté Adultos Sabor Pollo Lata 330 g,5.5,73.jpg
+74,Ricocan,Ricocan Trocitos en Salsa Adultos Sabor Carne verduras Lata 290 g,5.0,74.jpg
+75,Ricocan,Ricocan Trocitos en Salsa Adultos Sabor Cordero arroz Lata 290 g,5.0,75.jpg
+76,Ricocan,Ricocan Trocitos en Salsa Adultos Sabor Pollo verdura Lata 290 g,5.0,76.jpg
+77,Ricocan,Ricocan Trocitos en Salsa sabor pollo Lata 290 g,5.0,77.jpg
+78,Ricocat,Ricocat Adultos Sabor Pollo Pouch 85 g,2.5,78.jpg
+79,Ricocat,Ricocat Adultos Sabor Salmón Pouch 85 g,2.5,79.jpg
+80,Tama,Tama Gourmet Mousse Sabor a Atún Gatos Lata 85 g,4.5,80.jpg
+81,Tama,Tama Gourmet Mousse Sabor a Pollo Gatos Lata 85 g,4.5,81.jpg
+82,Tama,Tama Gourmet Mousse Sabor a Salmón Gatos Lata 85 g,4.5,82.jpg
+83,Thor,Thor Adultos Paté Sabor Carne Lata 330 g,POR CONFIRMAR,83.jpg
+84,Wanpy,Wanpy Creamy Treat Tuna & Salmon Gatos 5 x 14 g (70 g),11.0,84.jpg
+85,Whiskas,Whiskas Filhote Gatito 2-12 Meses Sabor Carne en Salsa Pouch 85 g,POR CONFIRMAR,85.jpg
+86,Canbo,Canbo Dog Pollo y Arroz Senior 15 kg,225.0,86.jpg
+87,Canbo,Canbo Dog Pollo y Arroz 3 kg,POR CONFIRMAR,87.jpg
+88,Canbo,Canbo Dog Cordero Adultos PQ 7 kg,105.0,88.jpg
+89,Canbo,Canbo Dog Cordero Adultos PQ 3 kg,50.0,89.jpg
+90,Canbo,Canbo Dog Cordero Adultos MG 15 kg,210.0,90.jpg
+91,Canbo,Canbo Dog Cordero Adultos MG 3 kg,50.0,91.jpg
+92,Canbo,Canbo Dog Cordero Cachorro PQ 7 kg,112.0,92.jpg
+93,Canbo,Canbo Dog Cordero Cachorro PQ 1 kg,22.0,93.jpg
+94,Canbo,Canbo Dog Pollo y Arroz Weight Control 15 kg,225.0,94.jpg
+95,Canbo,Canbo Dog Pollo y Arroz Weight Control 3 kg,50.0,95.jpg
+96,Canbo,Canbo Dog Cordero Cachorro RM 15 kg,240.0,96.jpg
+97,Canbo,Canbo Dog Cordero Cachorro RM 3 kg,55.0,97.jpg
+98,Canbo,Canbo Dog Pollo y Arroz Cachorros MG 15 kg,210.0,98.jpg
+99,Canbo,Canbo Dog Pollo y Arroz Cachorros MG 3 kg,POR CONFIRMAR,99.jpg
+100,Canbo,Canbo Dog Skin Protection con Salmón Adulto 15 kg,240.0,100.jpg
+101,Canbo,Canbo Dog Skin Protection con Salmón Adulto 3 kg,POR CONFIRMAR,101.jpg
+102,Ricocan,Ricocan Cachorros Carne y Leche PQ 22 kg,176.0,102.jpg
+103,Ricocan,Ricocan Cachorros Carne y Leche PQ 1 kg,POR CONFIRMAR,103.jpg
+104,Ricocan,Ricocan Cordero Adultos MG 22 kg,165.0,104.jpg
+105,Ricocan,Ricocan Cordero Adultos MG 1 kg,10.0,105.jpg
+106,Ricocan,Ricocan Cordero Adultos PQ 22 kg,165.0,106.jpg
+107,Ricocan,Ricocan Cordero Adultos PQ 1 kg,10.0,107.jpg
+108,Bandido,Bandido SB Carne T.RZ AD,POR CONFIRMAR,108.jpg
+109,Thor,Thor SB Carne Hígado Cereales T.RZ AD,POR CONFIRMAR,109.jpg
+110,Brit,Brit Care Cat Grain Free Sterilized Sensitive Fresh Rabbit 2 kg,98.0,110.jpg
+111,Brit,Brit Grain Free Veterinary Diet Renal Egg & Pea 2 kg,85.0,111.jpg
+112,Equilibrio,Equilibrio Veterinary Dogs Hypoallergenic HA Cães 2 kg,85.0,112.jpg
+113,Monge,Monge VetSolution Canine Hepatic 2 kg,79.0,113.jpg
+114,Monge,Monge VetSolution Canine Renal and Oxalate 2 kg,79.0,114.jpg
+115,Purina Dog Chow,Purina Dog Chow Gran Comienzo Cachorros Minis y Pequeños 3 kg,40.0,115.jpg
+116,Purina Pro Plan,Purina Pro Plan Optiage Adult 7+ Gatos 3 kg,115.0,116.jpg
+117,Purina Pro Plan,Purina Pro Plan Sensitive Skin Adulto Razas Medianas y Grandes Salmón 3 kg,80.0,117.jpg
+118,Royal Canin,Royal Canin Feline Care Nutrition Urinary Care 2 kg,138.0,118.jpg
+119,Canbo,Canbo Cat Sterilized Care Adulto 7 kg,140.0,119.jpg
+120,Canbo,Canbo Cat Sterilized Care Adulto 3 kg,72.0,120.jpg
+121,Canbo,Canbo Cat Sterilized Care Adulto 1 kg,29.0,121.jpg
+122,Canbo,Canbo Cat Urinary Health Adulto 7 kg,140.0,122.jpg
+123,Canbo,Canbo Cat Urinary Health Adulto 3 kg,72.0,123.jpg
+124,Canbo,Canbo Cat Urinary Health Adulto 1 kg,29.0,124.jpg
+125,Canbo,Canbo Cat Senior Todas las Razas 3 kg,72.0,125.jpg
+126,Canbo,Canbo Cat Senior Todas las Razas 1 kg,29.0,126.jpg
+127,Canbo,Canbo Cat Initial Development Cachorro 7 kg,140.0,127.jpg
+128,Canbo,Canbo Cat Initial Development Cachorro 3 kg,72.0,128.jpg
+129,Canbo,Canbo Cat Initial Development Cachorro 1 kg,29.0,129.jpg
+130,Canbo,Canbo Cat Pollo Todas las Razas Adulto 3 kg,72.0,130.jpg
+131,Canbo,Canbo Cat Pollo Todas las Razas Adulto 1 kg,29.0,131.jpg
+132,Ricocat,"Ricocat Carne, Pescado y Leche Cachorro 15 kg",142.5,132.jpg
+133,Ricocat,"Ricocat Carne, Pescado y Leche Cachorro 9 kg",95.0,133.jpg
+134,Ricocat,"Ricocat Carne, Pescado y Leche Cachorro 1 kg",12.0,134.jpg
+135,Ricocat,Ricocat Festival de Sabores Adulto 15 kg,142.5,135.jpg
+136,Ricocat,Ricocat Festival de Sabores Adulto 9 kg,95.0,136.jpg
+137,Ricocat,Ricocat Festival de Sabores Adulto 1 kg,12.0,137.jpg
+138,Ricocat,Ricocat Esterilizados Adulto 15 kg,142.5,138.jpg
+139,Ricocat,Ricocat Esterilizados Adulto 9 kg,95.0,139.jpg
+140,Ricocat,Ricocat Esterilizados Adulto 1 kg,12.0,140.jpg
+141,Michicat,Michicat Pollo y Sardina Adulto,7.0,141.jpg
+142,Pawner,Pawner Cat Esterilizados Todas las Razas Adulto 8 kg,120.0,142.jpg
+143,Purina ONE,Purina ONE Sterilized Salmon Cat 6 kg,168.0,143.jpg
+144,Purina ONE,Purina ONE Cat Salmon 6 kg,168.0,144.jpg
+145,Friskies,Friskies Feline Surfing and Turfing Adulto 7.5 kg,105.0,145.jpg
+146,Hill's,Hill's Prescription Diet Urinary Care c/d Multicare Gatos Bolsa,140.0,146.jpg
+147,Hill's,Hill's Science Diet Adult 1-6 Gatos 1.8 kg,120.0,147.jpg
+148,Hill's,Hill's Science Diet Light Adult 1-6 Gatos 1.8 kg,120.0,148.jpg
+149,Monge,Monge VetSolution Feline Gastrointestinal Pork with Anchovies 1.5 kg,78.0,149.jpg
+150,Monge,Monge VetSolution Feline Urinary Oxalate Hydrolysed Salmon 1.5 kg,78.0,150.jpg
+151,Monge,Monge VetSolution Feline Urinary Struvite Hydrolysed Salmon 1.5 kg,78.0,151.jpg
+152,Nath,Nath Adult Sterilised Chicken and Rice 2 kg,68.0,152.jpg
+153,Gran Plus,Gran Plus Gourmet Gato Filhote Salmão e Frango 3 kg,83.0,153.jpg
+154,Ricocrack,Ricocrack Cordero Adulto 500 g,14.0,154.jpg
+155,Ricocrack,Ricocrack Cordero Adulto 200 g,7.5,155.jpg
+156,Ricocrack,Ricocrack Multisabores Adulto 500 g,14.0,156.jpg
+157,Ricocrack,Ricocrack Multisabores Adulto 200 g,7.5,157.jpg
+158,Ricocrack,Ricocrack Festival de Frutas 500 g,14.0,158.jpg
+159,Ricocrack,Ricocrack Festival de Frutas 200 g,7.5,159.jpg
+160,Ricocrack,Ricocrack Leche Cachorro 200 g,7.5,160.jpg
+161,Ricocrack,Ricocrack Multisabores Cachorro 200 g,7.5,161.jpg
+162,Rex,Rex Deli Twist Todas las Razas Adulto 85 g,7.5,162.jpg
+163,Yamis,Yamis Rollitos Carne a la Parrilla Todas las Razas Adulto 80 g,7.5,163.jpg
+164,Yamis,Yamis Piernitas Pollo a la Leña Todas las Razas Adulto 80 g,7.5,164.jpg
+165,Yamis,Yamis Filetitos Tocino Ahumado Todas las Razas Adulto 90 g,7.5,165.jpg
+166,Canbo,Canbo Biscuits Cordero Adulto 200 g,14.0,166.jpg
+167,Canbo,Canbo Biscuits Cordero Cachorro 200 g,14.0,167.jpg
+168,Kissito,Kissito Cremosito Cat Food Adulto Pollo Bolsa 56 g,8.0,168.jpg
+169,Kissito,Kissito Cremosito Cat Food Adulto Atún y Salmón Bolsa 56 g,8.0,169.jpg
+170,Kissito,Kissito Cremosito Cat Food Adulto Atún y Pollo Bolsa 56 g,8.0,170.jpg
+171,Wanpy,Wanpy Tasty Meat Paste,11.0,171.jpg
+172,Brit,Brit Care Cat Functional Snack Hairball Psyllium Salmon Oil Sea Buckthorn,11.0,172.jpg
+173,Dentitoy,Dentitoy Limpieza Dental Perros Caja,POR CONFIRMAR,173.jpg
+174,Rambala,Disney Stitch Sticks Pollo Hawaiano Perros Rambala,POR CONFIRMAR,174.jpg
+175,Felix,"Purina Felix Travesuras Ocean Mix 15x40 g (cangrejo, camarón, atún)",6.0,175.jpg
+176,Felix,"Purina Felix Travesuras Original Mix (pollo, hígado, pavo)",6.0,176.jpg
+177,Barker,Natural Home Barker Premios Naturales Deshidratados Mollejas de Pollo 70 g,18.0,177.jpg
+178,Barker,Premios Barker Bites Snacks Deshidratados Hígado de Res 100 g,18.0,178.jpg
+179,Purina DentaLife,Purina DentaLife Cuidado Oral Diario Perros Medianos 7 Unidades 119 g,16.0,179.jpg
+180,Purina DentaLife,Purina DentaLife Cuidado Oral Diario Perros Pequeños 7 Unidades 42 g,8.0,180.jpg
+181,Rambala,Rambala Aritos de Res Treats Saludables Para Perros 5 unidades,POR CONFIRMAR,181.jpg
+182,Rambala,Rambala Galletitas ¡Guau! de Leche 100% Naturales Perros Caja 180 g,POR CONFIRMAR,182.jpg
+183,Ricocrack,Ricocrack Multisabores Adultos Galletas para Perro Caja 200 g,7.5,183.jpg
+184,Wanpy,Wanpy Dog Treats Duck Jerky Strips Tiras de Pato 100 g,11.0,184.jpg
+185,Yamis,Yamis Ahumaditos Deliciosos y Suavecitos Tiras Rintisa,POR CONFIRMAR,185.jpg
+186,Yamis,Yamis Ahumaditos Piernitas Sabor Pollo a la Brasa Perros 80 g,POR CONFIRMAR,186.jpg
+187,Fresh Can,Fresh Can Wipe Té Verde con Aloe Vera Bolsa x 100 un,POR CONFIRMAR,187.jpg
+188,,Super Tab Caja (30 tabletas),58.0,188.jpg
+189,,Super Tab (Unidad),2.0,189.jpg
+190,,Super Tab Frasco (60 tabletas),80.0,190.jpg
+191,,Hemovitab (30 tabletas),55.0,191.jpg
+192,,Hemovitab (Unidad),2.0,192.jpg
+193,,Vital Derm Caja (30 tabletas),58.0,193.jpg
+194,,Vital Derm (Unidad),2.0,194.jpg
+195,,Vital Derm Frasco (60 tabletas),55.0,195.jpg
+196,,Hepatosil Frasco (60 tabletas),80.0,196.jpg
+197,,Hepatosil (Unidad),2.0,197.jpg
+198,,Hepabiot (30 tabletas),60.0,198.jpg
+199,,Hepabiot (Unidad),2.5,199.jpg
+200,,Nutravet Biotina (30 comprimidos),7.0,200.jpg
+201,,Nutravet Biotina (100 comprimidos),21.0,201.jpg
+202,,Nutravet Biotina (150 comprimidos),31.0,202.jpg
+203,,Ultra Pet Calcio D3 (30 comprimidos),55.0,203.jpg
+204,,Ultra Pet Calcio D3 (Unidad),2.0,204.jpg
+205,,Cartilavet (30 comprimidos),55.0,205.jpg
+206,,Cartilavet (Unidad),2.0,206.jpg
+207,,Probiotics (30 comprimidos),60.0,207.jpg
+208,,Probiotics (Unidad),2.0,208.jpg
+209,,Vitalpet (30 comprimidos),55.0,209.jpg
+210,,Vitalpet (100 comprimidos),120.0,210.jpg
+211,,Higacure Tabs (30 comprimidos),10.0,211.jpg
+212,,Higacure Tabs (Unidad),1.0,212.jpg
+213,,Geriax UC II (30 tabletas),100.0,213.jpg
+214,,Geriax UC II (Unidad),3.5,214.jpg
+215,,Hepatin Frasco 60ml,10.0,215.jpg
+216,,Hepatin Frasco 120ml,15.0,216.jpg
+217,,Pet Tabs (30 tabletas),42.0,217.jpg
+218,,Pet Tabs (60 tabletas),72.0,218.jpg
+219,,Pet Tabs (180 tabletas),180.0,219.jpg
+220,,Pet Cal (60 tabletas),48.0,220.jpg
+221,,Pet Cal (200 tabletas),140.0,221.jpg
+222,,Urinodol (30 comprimidos),55.0,222.jpg
+223,,Urinodol (Unidad),2.0,223.jpg
+224,,Complejo B Frasco 100ml,39.5,224.jpg
+225,,Power Pet (100ml),45.0,225.jpg
+226,,Silimadrag (100ml),35.0,226.jpg
+227,,Potenza (Frasco 60ml),46.0,227.jpg
+228,,Cortivet (10 comprimidos),18.0,228.jpg
+229,,Cortivet (30 comprimidos),50.0,229.jpg
+230,,Griseovet (10 comprimidos),14.0,230.jpg
+231,,Griseovet (30 comprimidos),38.0,231.jpg
+232,,Broncol Pet (30 comprimidos),55.0,232.jpg
+233,,Broncol Pet (Unidad),2.0,233.jpg
+234,,Canivet Tab Antiparasitario (10 tabletas),20.0,234.jpg
+235,,Canivet Tab Antiparasitario (Unidad),2.0,235.jpg
+236,Artrin,Artrin Plus (30 tabletas),70.0,236.jpg
+237,,Histapet (30 comprimidos),45.0,237.jpg
+238,,Histapet (Unidad),1.5,238.jpg
+239,,Micopet (30 comprimidos),45.0,239.jpg
+240,,Cefavet 250mg (10 tabletas),28.0,240.jpg
+241,,Cefavet 500mg (10 tabletas),55.0,241.jpg
+242,,Carprovet 50mg (10 tabletas),27.0,242.jpg
+243,,Carprovet 100mg (10 tabletas),55.0,243.jpg
+244,,Tramavet (10 tabletas),18.0,244.jpg
+245,,Astringen (Frasco),7.5,245.jpg
+246,,Cardyo Plus (30 comprimidos),55.0,246.jpg
+247,Apoquel,Apoquel 3.6mg (20 tabletas),100.0,247.jpg
+248,,Floxagel Ótico (15ml),25.0,248.jpg
+249,,Sustituto de Lágrimas Tears (10ml),15.0,249.jpg
+250,,Tobramax (5ml),24.5,250.jpg
+251,,Ciprovet (5ml),33.5,251.jpg
+252,,Ocubiotic Colirio sin esteroides (5ml),30.0,252.jpg
+253,,Lagripet (Spray 15ml),36.0,253.jpg
+254,,Otibact (5g),33.0,254.jpg
+255,,Tranquilliss Gotas (10ml),17.5,255.jpg
+256,,Calma2 Gotas (10ml),19.0,256.jpg
+257,,Hipocloroso Spray Cicatrizante (120ml),25.0,257.jpg
+258,,Cicatrex 40gr,20.0,258.jpg
+259,,Crema 6A (15gr),15.0,259.jpg
+260,,Dermomax (Tubos),39.0,260.jpg
+261,,Oprurix (3.5mg - 20 tabletas),48.0,261.jpg
+262,,Optodec (15ml),16.5,262.jpg
+263,,Telopar Gel (15ml),19.5,263.jpg
+264,,Vetpro Dermacare Shampoo (250ml),43.0,264.jpg
+265,,Factor Hepático 100 (100ml),41.0,265.jpg
+266,,Ursovet (60s),58.5,266.jpg
+267,,Omegapel (120ml),41.0,267.jpg
+268,,Omega 3 Pets Gatos (120ml),43.0,268.jpg
+269,,Nutrical (120.5g),45.0,269.jpg
+270,,PetAg High Calorie Gel (141.7g),79.5,270.jpg
+271,,Ecaotic (Spray 50ml),39.5,271.jpg
+272,,Ecaderm Spray (125ml),42.0,272.jpg
+273,,Ecaderm Crema (250g),54.0,273.jpg
+274,,Bactrina (100ml),26.5,274.jpg
+275,,Hepatiopet (30 tabletas),55.0,275.jpg
+276,,Alerflam (30 comprimidos),45.0,276.jpg
+277,,Gastropet (30 comprimidos),45.0,277.jpg
+278,,Floxatel (10 comprimidos),30.0,278.jpg
+279,,Clamovet (10 comprimidos),30.0,279.jpg
+280,,Parwetol (30 tabletas),45.0,280.jpg
+281,,Fripets Trio (30 tabletas),55.0,281.jpg
+282,,Meloxivet 1.5mg (10 tabletas),17.5,282.jpg
+283,,Doxitel 100mg (20 tabletas),31.5,283.jpg
+284,,Total Full LC (Tableta 5kg),10.0,284.jpg
+285,,Total Full CG (50ml),48.0,285.jpg
+286,,Otiflex (Gotero 20ml),39.5,286.jpg
+287,,Gingivet (30ml),36.0,287.jpg
+288,Seresto,Seresto (Perros hasta 8kg),120.0,288.jpg
+289,,Pipeta Tilin (Perros hasta 10kg),28.0,289.jpg
+290,,Power Ultra Perro (Hasta 5kg - 1 tab),18.0,290.jpg
+291,Rivolta,Rivolta 6% (Hasta 4kg),23.5,291.jpg
+292,Rivolta,Rivolta 12% Perros (10.1 - 25kg),43.0,292.jpg
+293,Bravecto,Bravecto (2.0 - 4.5kg),95.0,293.jpg
+294,,Nexgard X3 Tab (2 - 4kg),53.0,294.jpg
+295,Simparica,Simparica X3 Tab (2.5 - 5kg),55.0,295.jpg
+296,,Power Comprimidos Gatos (Hasta 2.5kg),25.0,296.jpg
+297,Proteggo,Proteggo 3M (Hasta 4kg),45.0,297.jpg
+298,,Promazil Gotas (10ml),45.0,298.jpg
+299,,Proteliv Comprimidos (30 comprimidos),55.0,299.jpg
+300,,Hematolic (100ml),45.0,300.jpg
+301,Artrin,Artrin (30 tabletas),55.0,301.jpg
+302,,Hemolitan Pet (50ml),44.0,302.jpg
+303,,Hialurina (15ml),45.0,303.jpg
+304,,Dexaflox (20ml),30.0,304.jpg
+305,,Classica (20 comprimidos),38.0,305.jpg
+306,,Itrapet (20 tabletas),45.0,306.jpg
+307,,Lax-Natur (60g),29.5,307.jpg
+308,,Previcox 227mg (10 comprimidos),115.0,308.jpg
+309,,Prednovet x10 Comprimidos (20 mg),27.0,309.jpg
+310,,Trivermex Comprimidos 80kg (1 comprimido),12.0,310.jpg
+311,,Gentax-Ótico (15gr),30.0,311.jpg
+312,,Alerdog (30 comprimidos),45.0,312.jpg
+313,,Crema Livre (20gr),25.0,313.jpg
+314,Bio Clin,Bio Clin (Pasta dental con cepillo),35.0,314.jpg
+315,,Broncopet (120ml),35.0,315.jpg
+316,,Epakitin (60g),95.0,316.jpg
+317,,Dermasep (50ml),28.5,317.jpg
+318,,Neo Vitapel (60 comprimidos),55.0,318.jpg
+319,,Ocubiotic con esteroides (5ml),32.0,319.jpg
+320,,Florafix Pet Pasta (14g),40.0,320.jpg
+321,Hill's,Hill's Prescription Food Sensitivities,25.0,321.jpg
+322,Inaba,Inaba Churu Unique Creamy Treat Tuna recipe with Crab 4 tubos,10.0,322.jpg
+323,Purina Dog Chow,Purina Dog Chow Real Lamb lata,8.5,323.jpg
+324,Purina Dog Chow,Purina Dog Chow Real Turkey lata,8.5,324.jpg
+325,Purina Dog Chow,Purina Dog Chow HA Hydrolyzed lata,8.5,325.jpg
+326,Purina,Purina Dogitos 65 g,8.5,326.jpg
+327,Purina Pro Plan,Purina Pro Plan Kidney function,18.0,327.jpg
+328,Gran Plus,Gran Plus Gourmet Gato Castrado a granel 1 kg,21.0,328.jpg
+329,Gran Plus,Gran Plus Gourmet Gato Castrado x10 kg,210.0,329.jpg
+330,Gran Plus,Gran Plus Gato adulto pollo y arroz linea menú 1 kg,20.0,330.jpg
+331,Gran Plus,Gran Plus Gato adulto pollo y arroz linea menú 10 kg,200.0,331.jpg
+332,Gran Plus,Gran Plus Gato paté gourmet salmón (bola de pelo),POR CONFIRMAR,332.jpg
+334,Guabi,Guabi Natural Gato Adulto Salmao & Cevada a granel 1 kg,25.0,334.jpg
+335,Gran Plus,Gran Plus Gourmet adulto oveja pouch,6.5,335.jpg
+336,Gran Plus,Gran Plus Gourmet adulto salmón + pollo pouch,6.5,336.jpg
+337,Super Cat,Super Cat Carne Leche Cachorro a Granel 1 kg,15.0,337.jpg
+338,Super Cat,Super Cat Delicias Felinas Pollo Carne Leche Pescado Cachorro Granel 1 kg,POR CONFIRMAR,338.jpg
+339,Super Cat,Super Cat Carne Pollo Leche Adulto 1 kg,POR CONFIRMAR,339.jpg
+340,Super Cat,Super Cat Sardina Atún Trucha Adulto 1 kg,POR CONFIRMAR,340.jpg
+341,Super Cat,Super Cat Pollo Carne Atún Sardina Adulto 1 kg,POR CONFIRMAR,341.jpg
+342,Super Cat,Super Cat Delicias Felinas Pescado Cachorro Pouch,2.5,342.jpg
+343,Super Cat,Super Cat Delicias Felinas Atún Pescado Pouch,2.5,343.jpg
+344,Super Cat,Super Cat Delicias en Salsa Pescado 190 g,2.5,344.jpg
+345,Super Cat,Super Cat Delicias en Salsa Pavo 190 g,POR CONFIRMAR,345.jpg
+346,Super Cat,Super Cat Delicias en Salsa Carne 190 g,POR CONFIRMAR,346.jpg
+347,Super Cat,Super Cat Delicias en Salsa Atún Adulto Lata 190 g,3.5,347.jpg
+348,Super Cat,Super Cat Paté Carne Cachorro 190 g,3.5,348.jpg
+349,Ricocrack,Ricocrack Integrales 500 g,14.0,349.jpg
+350,Ricocrack,Ricocrack Integrales 200 g,7.5,350.jpg
+353,Cool Cat,Cool Cat 5 kg,14.0,353.jpg
+354,Cool Cat,Cool Cat 10 kg,26.0,354.jpg
+355,Cool Cat,Cool Cat 20 kg,45.0,355.jpg
+356,Cute Cat,Cute Cat 5 kg,27.0,356.jpg
+357,Cute Cat,Cute Cat 10 kg,52.0,357.jpg
+358,Happy Clean Cat,Happy Clean Cat 5 kg,13.0,358.jpg
+359,Klin Kat,Klin Kat 5 kg,18.0,359.jpg
+360,Klin Kat,Klin Kat 10 kg,35.0,360.jpg
+361,Klin Kat,Klin Kat 20 kg,59.0,361.jpg
+362,Capsufet,Capsufet con Aroma 3 kg,7.0,362.jpg
+363,Capsufet,Capsufet con Aroma 5 kg,10.0,363.jpg
+364,Capsufet,Capsufet sin Aroma 3 kg,7.0,364.jpg
+365,Capsufet,Capsufet sin Aroma 5 kg,10.0,365.jpg
+366,Sonqo,Sonqo Granulado con Carbón 5 kg,12.0,366.jpg
+367,Sonqo,Sonqo Granulado de Lavanda 5 kg,12.0,367.jpg
+368,Sonqo,Sonqo Perlado Premium con Aroma de Manzana 5 kg,15.0,368.jpg
+369,Sonqo,Sonqo Perlado Premium con Aroma a Bebé 5 kg,15.0,369.jpg
+370,Sonqo,Sonqo Perlado Premium con Aroma a Carbón 5 kg,15.0,370.jpg
+371,Sonqo,Sonqo Perlado Premium con Aroma de Lavanda 5 kg,15.0,371.jpg
+372,,Training pads 20 Talla XL 6 layers,18.0,372.jpg
+373,,Training pads 20 Talla M 8 layers,18.0,373.jpg
+374,,Training pads 20 Talla L 8 layers,18.0,374.jpg
+375,,Training pads carbón activo 8 layers Talla L,28.0,375.jpg
+376,,Training pads carbón activo 8 layers Talla M,28.0,376.jpg
+377,Teti,Teti Cony Sustitutorio lácteo,8.5,377.jpg
+378,Teti,Teti Perro sustitutorio lácteo,8.5,378.jpg
+379,Conejina,Conejina Clasica a Granel 1 kg,3.5,379.jpg
+380,Conejina,Conejina para Bebé a Granel 1 kg,4.0,380.jpg
+381,,Heno de Alfalfa 80 g,6.0,381.jpg
+382,,Heno de Avena 800 g,12.0,382.jpg
+383,,Alpiste Color Entero 1 kg a Granel,8.0,383.jpg
+384,,Alpiste de Colores 1 kg a Granel,8.5,384.jpg
+385,,Girasol a granel 1 kg,8.0,385.jpg
+386,Dentitoy,Dentitoy 500 g Ganado Vacuno,20.0,386.jpg
+387,Barker,Natural Home Barker Premios Naturales Deshidratados orejas de cerdo 70 g,18.0,387.jpg
+388,Barker,Natural Home Barker Premios Naturales Deshidratados patas de pollo 70 g,18.0,388.jpg
+389,Barker,Natural Home Barker Premios Naturales Deshidratados mix 70 g,18.0,389.jpg
+390,Barker,Premios Barker Bites Snacks Deshidratados pulmón de Res 100 g,18.0,390.jpg
+391,Barker,Premios Barker Bites Snacks Deshidratados pollo 100 g,18.0,391.jpg
+392,Barker,Premios Barker Bites Snacks Deshidratados mix 100 g,18.0,392.jpg
+393,Barker,Barker alimento Húmedo atún,10.5,393.jpg
+394,Barker,Barker alimento Húmedo pollo,10.5,394.jpg
+395,Barker,Barker alimento Húmedo pescado,10.5,395.jpg
+396,Barker,Barker alimento Húmedo salmón,10.5,396.jpg
+397,Par Pets,Par Pets Gato Paté de Trucha,8.0,397.jpg
+398,Par Pets,Par Pets Gato Paté de Carne,8.0,398.jpg
+399,Par Pets,Par Pets Gato Paté de Pollo y Arveja,8.0,399.jpg
+400,Par Pets,Par Pets Gato Paté de Pescado y Calamar,8.0,400.jpg
+401,Canbo,Canbo Adulto Recuperación y Rendimiento,10.5,401.jpg
+402,Wanpy,Wanpy Creamy Treat Chicken Gato,10.0,402.jpg
+403,,Zapatos Antideslizantes para Perro con Velcro Rosado Talla S x 4 un,POR CONFIRMAR,403.jpg
+404,,Zapatos de Silicona Impermeables para Perro Rojo x 4 un,15.0,404.jpg
+405,,Zapatos de Silicona Impermeables para Perro Verde Talla S x 4 un,15.0,405.jpg
+406,,Zapatos Antideslizantes para Perro con Cierre y Velcro Rojo Talla L x 4 un,POR CONFIRMAR,406.jpg
+407,,Palitos de Madera de Colores para Roer para Roedores Wood Toys x 8 un,10.0,407.jpg
+408,,Juguete de Madera Natural con Cascabel para Roedores,20.0,408.jpg
+409,,Juguete Zanahoria de Madera para Roer para Roedores,18.0,409.jpg
+410,,Faja Post Operatoria para Perro con Cierre Rojo Talla 2,POR CONFIRMAR,410.jpg
+411,,Faja Post Operatoria para Perro con Cierre Fucsia con Ribete Rosado Talla 3,POR CONFIRMAR,411.jpg
+412,,Faja Post Operatoria para Perro con Cierre Azul con Ribete Gris Talla 4,POR CONFIRMAR,412.jpg
+413,,Faja Post Operatoria para Perro con Cierre Azul con Ribete Celeste Talla 5,POR CONFIRMAR,413.jpg
+414,,Faja Post Operatoria para Perro con Cierre Verde Agua con Ribete Rosado Talla 5,POR CONFIRMAR,414.jpg
+415,,Faja Post Operatoria para Perro con Cierre Gris con Ribete Azul Talla 6,POR CONFIRMAR,415.jpg
+416,,Collar de Cadena Metálica Eslabón Grueso para Perro,15.0,416.jpg
+417,,Collar de Cadena Metálica Eslabón Delgado para Perro,11.0,417.jpg
+418,,Set de Pelotas con Cascabel para Gato x 5 und,POR CONFIRMAR,418.jpg
+419,,Dispensador de Bolsas para Desechos en Forma de Hueso Blanco con Gancho,POR CONFIRMAR,419.jpg
+420,,Dispensador de Bolsas para Desechos en Forma de Hueso Amarillo con Gancho,POR CONFIRMAR,420.jpg
+421,,Guante Quita Pelo de Silicona para Perros y Gatos Azul,POR CONFIRMAR,421.jpg
+422,,Guante Rociador de Baño para Mascotas con Manguera 2.6 M,25.0,422.jpg
+423,,Rodillo Quita Pelos Reutilizable Roller Stick Brush,23.0,423.jpg
+424,,Gastropet 10mg (40 comprimidos),POR CONFIRMAR,424.jpg
+425,Super Cat,Super Cat Paté Pescado Cachorro 190 g,3.5,425.jpg
+426,Super Cat,Super Cat Paté Hígado y Pavo Cachorro 190 g,3.5,426.jpg
+427,Super Cat,Super Cat Paté Atún y Sardina Cachorro 190 g,3.5,427.jpg
+501,,Maniquíes Perrito Chico,39.0,juguetes/001_maniquies-perrito.jpg
+502,,Maniquíes Perrito Grande,46.0,juguetes/001_maniquies-perrito.jpg
+503,,Soga con Hueso de Peluche,5.0,juguetes/002_soga-con-hueso-de-peluche.jpg
+504,,Peluche Hueso Chico,5.5,juguetes/003_peluche-hueso-chico.jpg
+505,,Hueso de Peluche,5.0,juguetes/004_hueso-de-peluche.jpg
+506,,Peluche Boomerang,6.5,juguetes/005_peluche-boomerang.jpg
+507,,Peluche Granja Cuello Largo,12.0,juguetes/006_peluche-granja-cuello-largo.jpg
+508,,Peluches de Dos Patas,8.5,juguetes/007_peluches-de-dos-patas.jpg
+509,,Peluche Jirafa con Cascabel,13.0,juguetes/008_peluche-jirafa-con-cascabel.jpg
+510,,Peluches Animales Sonrisas,12.5,juguetes/009_peluches-animales-sonrisas.jpg
+511,,Peluches Dientones,10.5,juguetes/010_peluches-dientones.jpg
+512,,Pato de Peluche,8.0,juguetes/011_pato-de-peluche.jpg
+513,,Peluche Gallinita,10.5,juguetes/012_peluche-gallinita.jpg
+514,,Peluche Pato Gigante,23.0,juguetes/013_peluche-pato-gigante.jpg
+515,,Patito de Peluche Chico,8.0,juguetes/014_patito-de-peluche.jpg
+516,,Peluches Panzoncitos Chico,POR CONFIRMAR,juguetes/015_peluches-panzoncitos.jpg
+517,,Peluches Panzoncitos Grande,21.0,juguetes/015_peluches-panzoncitos.jpg
+518,,Peluche Nemo,10.5,juguetes/016_peluche-nemo.jpg
+519,,Peluche Dino Chico,9.0,juguetes/017_peluche-dino-chico.jpg
+520,,Peluche Estegosaurio,9.5,juguetes/018_peluche-estegosaurio.jpg
+521,,Peluche Dinosaurio,9.5,juguetes/019_peluche-dinosaurio.jpg
+522,,Lorito de Peluche,10.5,juguetes/020_lorito-de-peluche.jpg
+523,,Peluche Animalitos Wafflypets,12.0,juguetes/021_peluche-animalitos-wafflypets.jpg
+524,,Peluche Jirafita,10.5,juguetes/022_peluche-jirafita.jpg
+525,,Peluche Animalitos Granjita,10.0,juguetes/023_peluche-animalitos-granjita.jpg
+526,,Peluche Orejones,11.0,juguetes/024_peluche-orejones.jpg
+527,,Peluche Pato Verde,22.0,juguetes/025_peluche-pato-verde.jpg
+528,,Peluches Animales Camuflados,14.0,juguetes/026_peluches-animales-camuflados.jpg
+529,,Animales Interactivos,10.5,juguetes/027_animales-interactivos.jpg
+530,,Peluche Osito Teddy Azul,18.0,juguetes/028_peluche-osito-teddy-azul.jpg
+531,,Peluche Caballito Carrusel,28.0,juguetes/029_peluche-caballito-carrusel.jpg
+532,,Peluche con Sonido,6.0,juguetes/030_peluche-con-sonido.jpg
+533,,Peluche Cuello de Soga,9.0,juguetes/031_peluche-cuello-de-soga.jpg
+534,,Peluches Animales Long Corrugados,7.5,juguetes/032_peluches-animales-long-corrugados.jpg
+535,,Peluche Animalitos Corrugados,7.0,juguetes/033_peluche-animalitos-corrugados.jpg
+536,,Animalitos Cuello de Soga,14.5,juguetes/034_animalitos-cuello-de-soga.jpg
+537,,Peluche Burrito Cola de Soga,22.0,juguetes/035_peluche-burrito-cola-de-soga.jpg
+538,,Peluche Perrito Cola de Soga,22.0,juguetes/036_peluche-perrito-cola-de-soga.jpg
+539,,Peluche Animalitos Cachetones,13.5,juguetes/037_peluche-animalitos-cachetones.jpg
+540,,Zorrito Patas Largas,26.5,juguetes/038_zorrito-patas-largas.jpg
+541,,Peluche Animalitos Barriguita Plana,12.5,juguetes/039_peluche-animalitos-barriguita-plana.jpg
+542,,Peluche Tigre Barriguita Plana,15.0,juguetes/040_peluche-tigre-barriguita-plana.jpg
+543,,Peluche Loco,11.0,juguetes/041_peluche-loco.jpg
+544,,Peluche Monster Felpa,9.0,juguetes/042_peluche-monster-felpa.jpg
+545,,Peluche Monstrito con Sonido Chico,14.5,juguetes/043_peluche-monstrito-con-sonido.jpg
+546,,Peluche Monstrito con Sonido Grande,17.0,juguetes/043_peluche-monstrito-con-sonido.jpg
+547,,Peluche Cactus con Brazitos,7.0,juguetes/044_peluche-cactus-con-brazitos.jpg
+548,,Peluche Animalitos Largos,7.0,juguetes/045_peluche-animalitos-largos.jpg
+549,,Peluche Alverja,17.0,juguetes/046_peluche-alverja.jpg
+550,,Frisbee Peluche Mariquita,14.0,juguetes/047_freesbee-peluche-mariquita.jpg
+551,,Coneja Toy con Gafas 33.5 cm (aprox.),10.5,juguetes/048_coneja-toy-con-gafas.jpg
+552,,Conejo Toy con Gafas 33.5 cm (aprox.),10.5,juguetes/049_conejo-toy-con-gafas.jpg
+553,,Pollo Toy Chico (16 cm),1.5,juguetes/050_pollo-toy.jpg
+554,,Pollo Toy Mediano (29 cm),3.0,juguetes/050_pollo-toy.jpg
+555,,Pollo Toy Grande (35 cm),4.0,juguetes/050_pollo-toy.jpg
+556,,Pollo Toy Extra Grande (41 cm),5.5,juguetes/050_pollo-toy.jpg
+557,,Pollo Toy T-Gigante,21.0,juguetes/051_pollo-toy-t-gigante.jpg
+558,,Pollo con Gafas,5.0,juguetes/052_pollo-con-gafas.jpg
+559,,Juguete Banana Toy,3.5,juguetes/053_juguete-banana-toy.jpg
+560,,Hamburguesa Toy,2.5,juguetes/054_hamburguesa-toy.jpg
+561,,Hamburguesa Doble Toy,2.0,juguetes/055_hamburguesa-doble-toy.jpg
+562,,Hueso Toy Natural,2.5,juguetes/056_hueso-toy-natural.jpg
+563,,Pollo a la Brasa Toy,5.0,juguetes/057_pollo-a-la-brasa-toy.jpg
+564,,Pelota Toy con Púas y Luces Chico,3.5,juguetes/058_pelota-toy-con-puas-y-luces.jpg
+565,,Pelota Toy con Púas y Luces Grande,5.0,juguetes/058_pelota-toy-con-puas-y-luces.jpg
+566,,Pelota Bicolor con Púas Luces,3.0,juguetes/059_pelota-bicolor-con-puas-luces.jpg
+567,,Pelota de Playa con Luces,3.0,juguetes/060_pelota-de-playa-con-luces.jpg
+568,,Pelota Luces con Diseños,3.0,juguetes/061_pelota-luces-c-disenos.jpg
+569,,Pelota Compacta Figuras,7.5,juguetes/062_pelota-compacta-figuras.jpg
+570,,Pelota Chillona Chico,5.0,juguetes/063_pelota-chillona.jpg
+571,,Pelota Chillona Mediano,6.0,juguetes/063_pelota-chillona.jpg
+572,,Pelota Chillona Grande,7.5,juguetes/063_pelota-chillona.jpg
+573,,Poop Toy Carita,2.5,juguetes/064_poop-toy-carita.jpg
+574,,Llanta de Jebe,4.0,juguetes/065_llanta-de-jebe.jpg
+575,,Mancuerna Hueso Huellita Chico,2.0,juguetes/066_mancuerna-hueso-huellita.jpg
+576,,Mancuerna Hueso Huellita Mediano,3.0,juguetes/066_mancuerna-hueso-huellita.jpg
+577,,Hueso Púas Color Entero,3.5,juguetes/067_hueso-puas-color-entero.jpg
+578,,Hueso con Púas y Luces Grande,5.0,juguetes/068_hueso-con-puas-y-luces.jpg
+579,,Hueso Mini,2.0,juguetes/069_hueso-mini.jpg
+580,,Huesito Cebra Toy Mediano,3.0,juguetes/070_huesito-cebra-toy.jpg
+581,,Huesito Cebra Toy Grande,3.0,juguetes/070_huesito-cebra-toy.jpg
+582,,Huesito Jebe con Sonaja,4.5,juguetes/071_huesito-jebe-con-sonaja.jpg
+583,,Pelota Ovala Luces,6.5,juguetes/072_pelota-ovala-luces.jpg
+584,,Lanzador de Pelotas Tennis 61 x 18 cm,50.0,juguetes/073_lanzador-de-pelotas-tennis.jpg
+585,,Disco de Caucho Lion,11.5,juguetes/074_disco-de-caucho-lion.jpg
+586,,Frisbee de Caucho Perrito,13.5,juguetes/075_frisbee-de-caucho-perrito.jpg
+587,,Aro de Caucho con Púas y Cascabel Lion Chico (11 cm),8.0,juguetes/076_aro-de-caucho-con-puas-y-cascabel-lion.jpg
+588,,Aro de Caucho con Púas y Cascabel Lion Grande (15 cm),10.5,juguetes/076_aro-de-caucho-con-puas-y-cascabel-lion.jpg
+589,,Aros de Caucho con Cascabel Chico (11 cm),8.0,juguetes/077_aros-de-caucho-con-cascabel.jpg
+590,,Aros de Caucho con Cascabel Grande (15 cm),10.5,juguetes/077_aros-de-caucho-con-cascabel.jpg
+591,,Llanta de Caucho Lion Mediano,20.0,juguetes/078_llanta-de-caucho-lion.jpg
+592,,Llanta de Caucho Lion Grande,24.0,juguetes/078_llanta-de-caucho-lion.jpg
+593,,Set Pelota de Tennis Huella x3,7.0,juguetes/079_set-pelota-de-tennis-huella-x3.jpg
+594,,Soga con Pelotas y Hueso Púas,10.5,juguetes/080_soga-con-pelotas-y-hueso-puas.jpg
