@@ -131,7 +131,16 @@ function pintarProductos() {
     if (claves.has(k)) (grupos.get(k) || grupos.set(k, []).get(k)).push(p);
   });
   $("#vacio").hidden = grupos.size > 0;
-  $("#grilla").innerHTML = [...grupos.values()].map(tarjeta).join("");
+  // Orden: primero por marca (A-Z; sin marca o "Farmacia" al final) y luego por nombre (A-Z)
+  const marcaDe = (v) => (v[0].marca && v[0].marca !== "Farmacia" ? v[0].marca : "");
+  const nombreDe = (v) => (v[0].grupo ? v[0].base : v[0].nombre);
+  const cmp = (a, b) => a.localeCompare(b, "es", { sensitivity: "base", numeric: true });
+  const lista = [...grupos.values()].sort((a, b) => {
+    const ma = marcaDe(a), mb = marcaDe(b);
+    if (!ma !== !mb) return ma ? -1 : 1;
+    return cmp(ma, mb) || cmp(nombreDe(a), nombreDe(b));
+  });
+  $("#grilla").innerHTML = lista.map(tarjeta).join("");
 }
 
 function pintar() {
