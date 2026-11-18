@@ -267,7 +267,7 @@ footer a:hover{text-decoration:underline}
 .dd-btn{width:100%;display:flex;align-items:center;gap:10px;padding:10px 14px;border:2px solid var(--tinta);border-radius:14px;background:#fff;color:var(--tinta);font:700 .95rem 'Nunito',sans-serif;text-align:left;cursor:pointer;transition:box-shadow .15s}
 .dd-btn:hover{box-shadow:0 0 0 3px rgba(247,198,0,.35)}
 .dd-btn[aria-expanded="true"]{box-shadow:0 0 0 3px rgba(247,198,0,.6)}
-.dd-txt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dd-txt{flex:1;min-width:0;white-space:normal;line-height:1.2}
 .dd-precio{font-weight:800;color:var(--gris);font-size:.9rem;white-space:nowrap}
 .dd-flecha{flex:none;width:8px;height:8px;margin:-3px 2px 0 0;border-right:2.5px solid var(--tinta);border-bottom:2.5px solid var(--tinta);transform:rotate(45deg);transition:transform .15s}
 .dd-btn[aria-expanded="true"] .dd-flecha{transform:rotate(225deg);margin-top:3px}
